@@ -1,0 +1,127 @@
+.home_container {
+    .hero {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(90deg, transparent 50%, rgba(112, 112, 230, 0.041) 50%);
+        height: 100vh;
+        padding-top: 10%;
+
+        .grid_img {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            z-index: -1;
+        }
+
+        .shape_img {
+            position: absolute;
+            top: 5%;
+            left: 2%;
+        }
+
+        .man_img {
+            position: absolute;
+            right: 10%;
+            z-index: 1;
+            // top: 0%;
+            bottom: 0%;
+            width: 25%;
+        }
+
+        .blob_img {
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+        }
+
+        .code_img {
+            position: absolute;
+            right: 25%;
+            animation: bounce 4s linear infinite;
+        }
+
+        .html_img {
+            position: absolute;
+            right: 35%;
+            bottom: 20%;
+            animation: bounce 4s linear infinite;
+        } 
+
+        .react_img {
+            position: absolute;
+            right: 3%;
+            bottom: 35%;
+            animation: bounce 4s linear infinite;
+        }
+
+        .hero_text {
+            .stack_badge {
+                background: #3ded97;
+                width: fit-content;
+                padding: 10px 30px;
+                color: #222222;
+                text-transform: uppercase;
+                word-spacing: 5px;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                border-radius: 5px;
+            }
+
+            .hero_lg_text {
+                font-size: 4rem;
+                margin-top: 10%;
+                letter-spacing: 2px;
+                font-weight: 800;
+            }
+
+
+            .btn {
+                padding: 20px 50px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                position: relative;
+                letter-spacing: 2px;
+                word-spacing: 2px;
+                border-radius: 5px;
+                z-index: 1;
+                transition: .3s ease-in;
+                box-shadow: none !important;
+        
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    bottom: 0%;
+                    right: 0%;
+                    background-color: #FFFFFF;
+                    border-radius: 5px;
+                    margin: 1.5px 2px;
+                    z-index: -1;
+                    opacity: 0;
+                    transition: .4s ease-in;
+                }
+        
+                &:hover {
+                    color: #222222;
+        
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
