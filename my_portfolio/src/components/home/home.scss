@@ -2,7 +2,7 @@
     .hero {
         position: relative;
         z-index: 1;
-        background: linear-gradient(90deg, transparent 50%, rgba(112, 112, 230, 0.041) 50%);
+        background: #dee4e775;
         height: 100vh;
         padding-top: 10%;
 
@@ -44,14 +44,14 @@
             position: absolute;
             right: 35%;
             bottom: 20%;
-            animation: bounce 4s linear infinite;
+            animation: bounce 5s linear infinite;
         } 
 
         .react_img {
             position: absolute;
             right: 3%;
             bottom: 35%;
-            animation: bounce 4s linear infinite;
+            animation: bounce 6s linear infinite;
         }
 
         .hero_text {
@@ -114,6 +114,15 @@
             }
         }
     }
+
+    .about_services {
+        padding-top: 5.5rem;
+
+        .about_lg_text {
+            font-size: 4rem;
+            font-weight: 600;
+        }
+    }
 }
 
 @keyframes bounce {
@@ -123,5 +132,47 @@
 
     50% {
         transform: translateY(-5px);
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .home_container {
+        .hero {
+            padding-top: 15%;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .home_container {
+        .hero {
+            .hero_lg_text {
+                font-size: 3.5rem !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .home_container {
+        .hero {
+            .blob_img {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .home_container {
+        .hero {
+            .stack_badge {
+                margin-top: 10%;
+            }
+
+            .hero_lg_text {
+                font-size: 2.5rem !important;
+            }
+        }
     }
 }

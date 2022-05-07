@@ -55,3 +55,12 @@ nav {
         }
     }
 }
+
+@media screen and (max-width: 991px) {
+    nav {
+        .collapse {
+            background: #FFFFFF !important;
+            padding: 20px 10px;
+        }
+    }
+}
