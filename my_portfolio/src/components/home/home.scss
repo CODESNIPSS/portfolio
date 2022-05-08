@@ -2,9 +2,13 @@
     .hero {
         position: relative;
         z-index: 1;
-        background: #dee4e775;
+        background: #dee4e73d;
         height: 100vh;
         padding-top: 10%;
+
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
 
         .grid_img {
             position: absolute;
@@ -174,5 +178,14 @@
                 font-size: 2.5rem !important;
             }
         }
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

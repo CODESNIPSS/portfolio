@@ -1,13 +1,44 @@
-import React from 'react'
-import { dataObject } from '../data/serviceData';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useEffect } from 'react'
+import { dataObject, myHobbies, services } from '../data/serviceData';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import AOS from 'aos';
+import "aos/dist/aos.css"
 
 const Intro = ()=> {
+    useEffect(()=> {
+        AOS.init();
+        AOS.refresh();
+    }, [] )
+
     return (
         <section className="about_services">
-            <Container>
+            <Container data-aos="fade-up"
+                        data-aos-duration="2000">
                 <Row>
-                    <Col md={6}></Col>
+                    <Col md={6} className="mt-5 pe-5">
+                        {services.map((data, index) => {
+                            return (
+                                <Card className='bg-light rounded rounded-3 p-3 border-0 mb-3' key={index}>
+                                    <Card.Body>
+                                        <Card.Title>
+                                            <h1 className='fw-bold'>
+                                                { data.heading }
+                                            </h1>
+                                        </Card.Title>
+
+                                        <Card.Text className='fs-5 text-muted'>
+                                            { data.text }
+
+
+                                            <div className='mt-3'>
+                                                { data.projectsAcc }
+                                            </div>
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            )
+                        })}
+                    </Col>
                     <Col md={6}>
                         <h5 className="text-muted">
                             { dataObject.smallHeadingText }
@@ -30,29 +61,13 @@ const Intro = ()=> {
                         <p className='mt-4 text-muted fs-5'>
                             { dataObject.paragraphText[1] }
 
-                            <b>
-                                { dataObject.hobbies[0] }
-                            </b>,
-
-                            <b>
-                                { dataObject.hobbies[1] }
-                            </b>,
-
-                            <b>
-                                { dataObject.hobbies[2] }
-                            </b>,
-
-                            <b>
-                                { dataObject.hobbies[3] }
-                            </b>,
-
-                            <b>
-                                { dataObject.hobbies[4] }
-                            </b>,
-
-                            <b>
-                                { dataObject.hobbies[5] }
-                            </b>
+                            {myHobbies.map((myData, index) => {
+                                return (
+                                    <span className='text-dark' key={index}>
+                                        { myData.hobbies }
+                                    </span>
+                                )
+                            })}
                         </p>
                     </Col>
                 </Row>

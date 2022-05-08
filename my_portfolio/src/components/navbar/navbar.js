@@ -1,10 +1,28 @@
 import { Nav, Navbar, Container, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import './navbar.scss'
+import React, { useState, useEffect } from "react"
 
 const MainNavbar = () => {
+    const [navbar, setNavbar] = useState(false);
+
+    const changeNavbarBg = ()=> {
+        // console.log(window.scrollY)
+        if(window.scrollY >= 60) {
+            setNavbar(true)
+        } else {
+            setNavbar(false)
+        }
+    }
+
+    useEffect(() => {
+        changeNavbarBg();
+
+        window.addEventListener("scroll", changeNavbarBg)
+    })
+
     return (
-        <Navbar className="bg-transparent fixed-top" expand="lg">
+        <Navbar className={ navbar ? "active shadow-sm fixed-top" : "fixed-top" } expand="lg">
             <Container>
                 <Navbar.Brand href="#home">Nathan</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

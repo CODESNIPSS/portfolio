@@ -1,4 +1,11 @@
 nav {
+    background: transparent !important;
+    transition: .4s ease-in;
+
+    &.active {
+        background: #FFFFFF !important;
+    }
+
     .nav-link {
         padding: 10px 20px !important;
         font-size: 1.2rem;
