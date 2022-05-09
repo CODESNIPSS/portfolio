@@ -33,11 +33,5 @@ export const services = [
         heading: "Front-end",
         text: "My coding structure is clean and smooth",
         projectsAcc: "60 Projects"
-    },
-
-    {
-        heading: "Design",
-        text: "My coding structure is clean and smooth",
-        projectsAcc: "20 Projects"
-    },
+    }
 ]

@@ -15,30 +15,6 @@ const Intro = ()=> {
             <Container data-aos="fade-up"
                         data-aos-duration="2000">
                 <Row>
-                    <Col md={6} className="mt-5 pe-5">
-                        {services.map((data, index) => {
-                            return (
-                                <Card className='bg-light rounded rounded-3 p-3 border-0 mb-3' key={index}>
-                                    <Card.Body>
-                                        <Card.Title>
-                                            <h1 className='fw-bold'>
-                                                { data.heading }
-                                            </h1>
-                                        </Card.Title>
-
-                                        <Card.Text className='fs-5 text-muted'>
-                                            { data.text }
-
-
-                                            <div className='mt-3'>
-                                                { data.projectsAcc }
-                                            </div>
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            )
-                        })}
-                    </Col>
                     <Col md={6}>
                         <h5 className="text-muted">
                             { dataObject.smallHeadingText }
@@ -69,6 +45,35 @@ const Intro = ()=> {
                                 )
                             })}
                         </p>
+                    </Col>
+
+                    <Col md={6} className="pe-5 h-100">
+                        <Row>
+                            {services.map((data, idx) => {
+                                return (
+                                    <Col md={12} key={idx}>
+                                        <Card className='bg-light rounded h-100 rounded-3 p-3 border-0 mb-3'>
+                                            <Card.Body>
+                                                <Card.Title>
+                                                    <h1 className='fw-bold'>
+                                                        { data.heading }
+                                                    </h1>
+                                                </Card.Title>
+
+                                                <Card.Text className='fs-5 text-muted'>
+                                                    { data.text }
+
+
+                                                    <div className='mt-3'>
+                                                        { data.projectsAcc }
+                                                    </div>
+                                                </Card.Text>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                )
+                            })}
+                        </Row>
                     </Col>
                 </Row>
             </Container>

@@ -1,4 +1,22 @@
 .home_container {
+    .social_link {
+        margin: 10px 50px;
+        font-size: 4rem;
+        color: #222222;
+
+        &.insta {
+            color: #fd1d1d;
+        }
+
+        &.twitter {
+            color: #1da1f2;
+        }
+
+        &.git {
+            color: #171515;
+        }
+    }
+
     .hero {
         position: relative;
         z-index: 1;
@@ -176,6 +194,20 @@
 
             .hero_lg_text {
                 font-size: 2.5rem !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home_container {
+        .hero {
+            img {
+                display: none;
+            }
+
+            .col-md-6 {
+                width: 100% !important;
             }
         }
     }

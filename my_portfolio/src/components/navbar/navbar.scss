@@ -71,3 +71,9 @@ nav {
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    nav {
+        background-color: #FFFFFF !important;
+    }
+}
